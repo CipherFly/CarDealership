@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>View Cars</title>
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/viewCss.css"
+	th:href="@{/css/viewCss.css}" />
+
+</head>
+<body>
+	<h1>Cars table/ <a id="home_link" href="/">Home</a></h1>
+	<div class="logo1">
+		<img class="carLogo" src="images/honda_logo.png">
+		<img class="carLogo" src="images/dodge_logo.png">
+		<img class="carLogo" src="images/toyota_logo.png">
+	</div>
+	<div class="logo2">
+		<img class="carLogo" src="images/honda_logo.png">
+		<img class="carLogo" src="images/dodge_logo.png">
+		<img class="carLogo" src="images/toyota_logo.png">
+	</div>
+	<div class="container">
+	<table id="car_table">
+		<tr>
+			<th>Make</th>
+			<th>Model</th>
+			<th>Colour</th>
+			<th>Price</th>
+			<th>VIN</th>
+			<th>Dealership</th>
+		
+		</tr>
+	
+		<tr th:each="c : ${car}">
+			<td th:text="${c.make}"></td>
+			<td th:text="${c.carModel}"></td>
+			<td th:text="${c.colour}"></td>
+			<td th:text="${'$'+#numbers.formatDecimal(c.price, 0, 'COMMA', 2, 'POINT')}"></td>
+			<td th:text="${c.vin}"></td>
+			<td th:text="${c.dealership}"></td>
+			<td><a href="" th:href="@{/edit/{id}(id=${c.id})}">EDIT</a></td>
+			<td><a href="" th:href="@{/delete/{id}(id=${c.id})}">DELETE</a></td>
+			<td><a href="" th:href="@{/purchase/{id}(id=${c.id})}">PURCHASE</a></td>
+		<tr>
+	
+	</table>
+	</div>
+</body>
+</html>

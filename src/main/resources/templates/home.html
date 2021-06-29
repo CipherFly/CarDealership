@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Home page</title>
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/homeCss.css"
+	th:href="@{/css/homeCss.css}" />
+
+</head>
+<body>
+<h1>Home Page</h1>
+<section class="container">
+	<div class="flex_container">
+		<div><a href="/goAddCar">Add Car</a></div>
+		<div><a href="/view">View Cars</a></div>
+		<div><a href="/searchCar">Search Cars</a></div>
+	</div>
+</section>
+<div class="img_container">
+	<figure>
+		<h2>Dodge</h2>
+		<img class="carImg" src="images/dodge.jpg">
+	<figcaption><a class="img_source" href="https://www.caricos.com/cars/d/dodge/2020_dodge_charger_srt_hellcat_widebody/images/6.html">Image Source</a></figcaption>
+	</figure>
+	<figure>
+		<h2>Alien</h2>
+		<img class="carImg" src="images/alien.jpg">
+	<figcaption><a class="img_source" href="http://topcarzzone.blogspot.com/2011/04/alien-car-style-modification.html">Image Source</a></figcaption>
+	</figure>
+	<figure>
+		<h2>Honda</h2>
+		<img class="carImg" src="images/honda.jpg">
+	<figcaption><a class="img_source" href="https://en.wikipedia.org/wiki/Honda_Civic">Image Source</a></figcaption>
+	</figure>
+	<figure>
+		<h2>Hyundai</h2>
+		<img class="carImg" src="images/hyundai.jpg">
+	<figcaption><a class="img_source" href="https://driving.ca/hyundai">Image Source</a></figcaption>
+	</figure>
+</div>
+
+</body>
+</html>

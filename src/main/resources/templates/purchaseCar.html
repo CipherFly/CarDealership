@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Purchased Car</title>
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/purchaseCss.css"
+	th:href="@{/css/purchaseCss.css}" />
+
+</head>
+<body>
+<h1>Car Receipt/ <a href="/">Home</a></h1>
+<div class="container">
+<h2>Car information</h2>
+<ul>
+	<li th:text="'Make: '+${car.make}"></li>
+	<li th:text="'Model: '+${car.carModel}"></li>
+	<li th:text="'Colour: '+${car.colour}"></li>
+	<li th:text="'VIN: '+${car.vin}"></li>
+	<li th:text="'Dealership: '+${car.dealership}"></li>
+	<li th:text="${'Car price: $'+#numbers.formatDecimal(car.price, 0, 'COMMA', 2, 'POINT')}"></li>
+	<li th:text="${'Tax (13%): $'+#numbers.formatDecimal(car.price*0.13, 0, 'COMMA', 2, 'POINT')}"></li>
+	<li th:text="${'Total price: $'+#numbers.formatDecimal(car.price*1.13, 0, 'COMMA', 2, 'POINT')}"></li>
+</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+#car_id{ grid-area:id;}
+#car_make{ grid-area:make;}
+#car_model{ grid-area:model;}
+#car_price{ grid-area:price;}
+
+.container{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: auto;
+	grid-template-areas: 
+		"id make"
+		"model price"
+		"img img";
+	 gap: 1%;
+		
+}
+
+body{
+	background-color: powderblue;
+}
+
+input[type=text]{
+  	width: 100%;
+  	padding: 10px 20px;
+  	margin: 8px 0;
+  	display: inline-block;
+  	border: 1px solid #ccc;
+  	border-radius: 4px;
+  	box-sizing: border-box;
+}
+
+input[type=submit] {
+  	width: 100%;
+  	background-color: #0080c0;
+  	color: white;
+  	padding: 14px 20px;
+  	margin: 6px 0;
+  	border: none;
+  	border-radius: 3px;
+  	cursor: pointer;
+}
+
+input[type=submit]:hover {
+  	background-color: #808000;
+}
+
+div {
+  	border-radius: 5px;
+  	background-color: #000000;
+  	padding: 20px;
+}
+
+legend {
+	color: #00ffff;
+}
+p{
+	color: #00ffff;
+}
+
+h1{
+	color: #00ffff;
+	font-size: 3em;
+	font-weight: bold;
+	text-align: center;
+	background-color: black;
+	padding-bottom: 10px;
+}
+
+.img_container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: nowrap;
+	grid-area: img;
+	background-color: #c0c0c0;
+	margin-top: 30px;
+}
+
+a:hover {
+  	color: hotpink;
+}
+
+.carImg{
+	height: 200px;
+	width: 300px;
+}
+
+.carImg > figure{
+	margin: 10px;
+	padding: 10px;
+}
+
+h2{
+	color: #00ffff;
+	text-align: center;
+	background-color: black;
+	padding-bottom: 10px;
+}
+
+a:link, a:visited {
+  	color: pink;
+  	background-color: transparent;
+  	text-decoration: underline;
+}
+
+a:hover {
+  	color: red;
+  	background-color: transparent;
+  	text-decoration: underline;
+}
+
+.img_source:link, .img_source:visited {
+	color: #0000ff;
+  	background-color: transparent;
+  	text-decoration: underline;
+}
+.img_source:hover {
+	color: red;
+  	background-color: transparent;
+  	text-decoration: underline;
+}

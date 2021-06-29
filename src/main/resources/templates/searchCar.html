@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Search Cars</title>
+
+<link rel="stylesheet" type="text/css" media="all"
+	href="../static/css/searchCss.css"
+	th:href="@{/css/searchCss.css}" />
+
+</head>
+<body>
+<h1>Search Cars/ <a href="/">Home</a></h1>
+<section class="container">
+<div>
+<form action="#" th:action="@{/searchCarID}" th:object="${car}" id="car_id">
+	<fieldset>
+	<legend>Search Car ID:</legend><br>
+	<p>ID</p> <input type="text" th:field="*{id}"/> <br>
+	<input type="submit" name="Search Car ID"/>
+	</fieldset>
+</form>
+</div>
+<div>
+<form action="#" th:action="@{/searchCarMake}" th:object="${car}" id="car_make">
+	<fieldset>
+	<legend>Search Car Make:</legend><br>
+	<p>Make</p> <input type="text" th:field="*{make}"/> <br>
+	<input type="submit" name="Search Car Make"/>
+	</fieldset>
+</form>
+</div>
+<div>
+<form action="#" th:action="@{/searchCarModel}" th:object="${car}" id="car_model">
+	<fieldset>
+	<legend>Search Car Model:</legend><br>
+	<p>Model</p> <input type="text" th:field="*{carModel}"/> <br>
+	<input type="submit" name="Search Car Model"/>
+	</fieldset>
+</form>
+</div>
+<div>
+<form action="#" th:action="@{/searchCarPrice}" th:object="${car}" id="car_price">
+	<fieldset>
+	<legend>Search Car Price:</legend><br>
+	<p>Min price</p> <input type="text" name="min"/> <br>
+	<p>Max price</p> <input type="text" name="max"/> <br>
+	<input type="submit" name="Search Car Price"/>
+	</fieldset>
+</form>
+</div>
+<section class="img_container">
+	<figure>
+		<h2>Dodge</h2>
+		<img class="carImg" src="images/dodge.jpg">
+	<figcaption><a class="img_source" href="https://www.caricos.com/cars/d/dodge/2020_dodge_charger_srt_hellcat_widebody/images/6.html">Image Source</a></figcaption>
+	</figure>
+	<figure>
+		<h2>Alien</h2>
+		<img class="carImg" src="images/alien.jpg">
+	<figcaption><a class="img_source" href="http://topcarzzone.blogspot.com/2011/04/alien-car-style-modification.html">Image Source</a></figcaption>
+	</figure>
+	<figure>
+		<h2>Honda</h2>
+		<img class="carImg" src="images/honda.jpg">
+	<figcaption><a class="img_source" href="https://en.wikipedia.org/wiki/Honda_Civic">Image Source</a></figcaption>
+	</figure>
+	<figure>
+		<h2>Hyundai</h2>
+		<img class="carImg" src="images/hyundai.jpg">
+	<figcaption><a class="img_source" href="https://driving.ca/hyundai">Image Source</a></figcaption>
+	</figure>
+</section>
+</section>
+</body>
+</html>
