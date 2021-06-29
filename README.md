@@ -8,4 +8,4 @@ Edit cars from database\
 Delete cars from database\
 'Purchase' a car from database\
 Languages used: Java, HTML, CSS, SQL.\
-Dependencies: H2 database, Spring data JDBC, Thymeleaf, Lombok
+Dependencies: H2 database, Spring data JDBC, Thymeleaf, Lombok.
