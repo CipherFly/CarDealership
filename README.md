@@ -6,9 +6,10 @@ User has ability to:
 - Search for cars from database
 - Edit cars from database
 - Delete cars from database
-- 'Purchase' a car from database
+- 'Purchase' a car from database 
+
 Languages used: Java, HTML, CSS, SQL.\
-Dependencies: H2 database, Spring data JDBC, Thymeleaf, Lombok.\
+Dependencies: H2 database, Spring data JDBC, Thymeleaf, Lombok.
 
 ![Main Page](readImg/MainPage.PNG)
 ![Add](readImg/AddCar.PNG)
